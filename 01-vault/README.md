@@ -4,7 +4,7 @@ You are looking through an old version of the OpenZeppelin implementation of ERC
 
 - a) Describe the vulnerability and the payoffs for an attacker.
   
-The vulnerability in the old OpenZeppelin ERC-4626 implementation likely involves share price manipulation through frontrunning. The vault does not update share prices atomically when large deposits occur, allowing an attacker to:
+The vulnerability in the old OpenZeppelin ERC-4626 implementation involves share price manipulation through frontrunning. The vault does not update share prices automically when large deposits occur, allowing an attacker to:
 1) Observe an incoming large deposit.
 2) Frontrun with a small deposit before the large one executes, obtaining shares at an artificially low price.
 3) Let the large deposit increase the share price since the new user’s deposit increases total assets without immediately affecting total shares.
